@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bio Link & Donate Page - Phiên bản màu tím quyến rũ và hiện đại!">
+    <meta property="og:title" content="Bio Link | Purple Style">
+    <meta property="og:description" content="Trang liên kết chính thức phiên bản màu tím.">
+    <meta property="og:image" content="huyen.gif">
+    <title>PURPLE STYLE | Bio Link & Donate 💜</title>
+    <link rel="icon" href="huyen.gif" type="image/gif">
+
+    <!-- THEM DM SERIF DISPLAY GOOGLE FONTS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Gluten:wght@100..900&family=Nunito:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style_tim.css">
+</head>
+
+<body>
+    <div class="video-bg-container">
+        <img src="back.gif" class="video-bg" alt="Background">
+        <div class="video-overlay"></div>
+    </div>
+
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="checkbox" aria-label="Chuyển đổi giao diện sáng tối">
+            <input type="checkbox" id="checkbox">
+            <div class="slider round">
+                <i class="fas fa-sun icon-sun"></i>
+                <i class="fas fa-moon icon-moon"></i>
+            </div>
+        </label>
+    </div>
+
+    <main class="profile-container">
+        <header class="profile-header">
+            <div class="avatar-wrapper">
+                <img class="profile-avatar" id="profile-avatar" src="huyen.gif" alt="Avatar">
+                <!-- KHUNG DECOR AVATAR (LOGIC TRONG JS) -->
+                <img class="avatar-decor" id="avatar-decor" src="" alt="Decor Frame">
+                <div class="avatar-glow"></div>
+            </div>
+
+            <!-- TEN MOI: HOM NAY MUON BUON -->
+            <h1 class="profile-name">Hôm nay Muối buồn</h1>
+
+            <div class="profile-meta">
+                <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Hà Nam, Việt Nam</span>
+                <span class="meta-tag">DESIGNER</span>
+            </div>
+        </header>
+
+        <section class="social-links-container">
+            <a href="https://www.tiktok.com/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="TikTok"
+                title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="social-icon-btn"
+                aria-label="Instagram" title="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="social-icon-btn" id="riot-trigger" aria-label="Riot Games" title="Riot Games">
+                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>Riot Games</title>
+                    <path
+                        d="M13.458.86 0 7.093l3.353 12.761 2.552-.313-.701-8.024.838-.373 1.447 8.202 4.361-.535-.775-8.857.83-.37 1.591 9.025 4.412-.542-.849-9.708.84-.374 1.74 9.87L24 17.318V3.5Zm.316 19.356.222 1.256L24 23.14v-4.18l-10.22 1.256Z" />
+                </svg>
+            </a>
+            <a href="https://discord.com/users/897847285122228244" target="_blank" rel="noopener"
+                class="social-icon-btn" aria-label="Discord" title="Discord">
+                <i class="fab fa-discord"></i>
+            </a>
+        </section>
+
+        <section class="bio-section animate-item">
+            <div class="bio-card">
+                <p class="bio-text" id="bio-text">Làm điều mình thích địt người mình yêu</p>
+            </div>
+        </section>
+
+        <section class="music-player-section animate-item">
+            <div class="yt-music-player">
+                <!-- Top Row: art + title + controls + volume -->
+                <div class="yt-player-top">
+                    <!-- Album Art -->
+                    <div class="yt-album-art-wrapper">
+                        <img src="huyen.gif" alt="Album Art" class="yt-album-art" id="player-album-art">
+                        <div class="music-waves" id="music-waves">
+                            <span></span><span></span><span></span><span></span>
+                        </div>
+                    </div>
+
+                    <!-- Title + Controls -->
+                    <div class="yt-player-middle">
+                        <div class="yt-track-details">
+                            <span class="yt-track-title" id="track-title">WILDFLOWER</span>
+                            <span class="yt-track-artist" id="track-artist">Billie Eilish</span>
+                        </div>
+                        <div class="yt-controls">
+                            <button class="yt-btn" id="shuffle-btn" title="Phát ngẫu nhiên"><i
+                                    class="fas fa-random"></i></button>
+                            <button class="yt-btn" id="play-prev-btn" title="Bài trước"><i
+                                    class="fas fa-step-backward"></i></button>
+                            <button class="yt-btn yt-play-main-btn" id="play-pause-btn" title="Phát/Tạm dừng"><i
+                                    class="fas fa-play" id="play-icon"></i></button>
+                            <button class="yt-btn" id="play-next-btn" title="Bài tiếp theo"><i
+                                    class="fas fa-step-forward"></i></button>
+                            <button class="yt-btn" id="repeat-btn" title="Lặp lại"><i
+                                    class="fas fa-redo-alt"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Volume -->
+                    <div class="yt-player-right">
+                        <button class="yt-btn" id="volume-btn" title="Âm lượng"><i class="fas fa-volume-up"
+                                id="volume-icon"></i></button>
+                        <div class="yt-volume-slider-wrapper" id="volume-slider-wrapper">
+                            <div class="yt-volume-fill" id="volume-fill" style="width: 80%;"></div>
+                            <input type="range" id="volume-slider" min="0" max="1" step="0.05" value="0.8"
+                                class="yt-volume-input" aria-label="Âm lượng">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Row: Progress Bar -->
+                <div class="yt-progress-container">
+                    <span class="yt-time-stamp" id="current-time">0:00</span>
+                    <div class="yt-progress-bar-wrapper" id="progress-bar-wrapper">
+                        <div class="yt-progress-bar-fill" id="progress-fill"></div>
+                        <div class="yt-progress-bar-handle" id="progress-handle"></div>
+                    </div>
+                    <span class="yt-time-stamp" id="total-duration">0:00</span>
+                </div>
+
+                <audio id="bg-audio" preload="auto">
+                    <source src="Billie Eilish - WILDFLOWER.mp3" type="audio/mpeg">
+                    <source src="People.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+
+        <section class="donate-section animate-item">
+            <h2 class="donate-title">DONATE AT HERE ^^ THANK YOU</h2>
+
+            <div class="donate-card">
+                <div class="account-owner">HA THI THANH HUYEN</div>
+
+                <div class="account-number-box" id="copy-bank-btn" title="Nhấp vào để sao chép số tài khoản">
+                    <span class="bank-number" id="bank-number">2212 1234 56666</span>
+                    <button class="copy-action-btn" aria-label="Sao chép số tài khoản">
+                        <i class="far fa-copy" id="copy-icon"></i>
+                    </button>
+                    <span class="tooltip" id="copy-tooltip">Nhấp để copy</span>
+                </div>
+
+                <div class="qr-code-wrapper">
+                    <img class="qr-image"
+                        src="https://img.vietqr.io/image/mb-2212123456666-compact2.png?addInfo=Donate%20Huyen&accountName=HA%20THI%20THANH%20HUYEN"
+                        alt="Mã VietQR MB Bank">
+                    <div class="qr-glow"></div>
+                </div>
+
+                <div class="scan-label">
+                    <i class="fas fa-qrcode"></i> Quét mã bằng ứng dụng Ngân hàng (VietQR / Napas 247)
+                </div>
+            </div>
+        </section>
+
+        <footer class="profile-footer">
+            <p>Made by <i class="fas fa-heart heart-beat"></i> for <span>THANH HUYỀN<span></p>
+        </footer>
+    </main>
+
+    <div id="qr-modal" class="qr-modal" aria-hidden="true">
+        <div class="qr-modal-content">
+            <span class="qr-modal-close" id="qr-modal-close" title="Đóng">&times;</span>
+            <h3 class="qr-modal-title">Quét Mã QR Donate</h3>
+            <div class="qr-modal-image-wrapper">
+                <img id="qr-modal-img" src="" alt="Mã QR phóng to">
+            </div>
+            <p class="qr-modal-desc">HA THI THANH HUYEN - MB Bank</p>
+            <button class="qr-modal-btn" id="qr-modal-copy-btn">Sao chép số tài khoản</button>
+        </div>
+    </div>
+
+    <div id="riot-modal" class="qr-modal" aria-hidden="true">
+        <div class="qr-modal-content">
+            <span class="qr-modal-close" id="riot-modal-close" title="Đóng">&times;</span>
+            <h3 class="qr-modal-title">Riot Game ID</h3>
+
+            <div class="email-display-wrapper">
+                <i class="fas fa-gamepad email-modal-icon" style="color: #ff4655;"></i>
+                <span id="riot-id-text">babidoremi#cutie</span>
+            </div>
+
+            <p class="qr-modal-desc">Thêm bạn để cùng chơi game nhé! 🎮</p>
+
+            <div class="email-modal-actions">
+                <button class="qr-modal-btn" id="riot-modal-copy-btn">Sao chép Riot ID</button>
+            </div>
+        </div>
+    </div>
+
+    <button class="h-assist-btn" id="h-assist-btn" aria-label="Mở Hỗ Trợ" title="Trò chuyện với Hanie Assistant">
+        <i class="fas fa-comment-dots h-icon-op"></i>
+        <i class="fas fa-times h-icon-cl" style="display: none;"></i>
+        <span class="h-assist-bdg">1</span>
+    </button>
+
+    <div class="h-assist-win" id="h-assist-win" aria-hidden="true">
+        <div class="h-assist-hdr">
+            <div class="h-hdr-info">
+                <div class="h-avt-wrap">
+                    <img src="huyen.gif" alt="Purple AI Avatar" class="h-avt-img">
+                    <span class="status-indicator online"></span>
+                </div>
+                <div class="h-title-cont">
+                    <span class="h-assist-title">Con Chó Của Huyền 🐶💜</span>
+                    <span class="h-assist-status">Đang trực tuyến</span>
+                </div>
+            </div>
+            <button class="h-assist-cls" id="h-assist-cls" aria-label="Đóng">&times;</button>
+        </div>
+
+        <div class="h-assist-msgs" id="h-assist-msgs">
+            <div class="h-msg-bubble h-ai animate-bubble">
+                <div class="h-msg-content">
+                    Gâu gâu! Xin chào! Mình là **Con Chó Của Huyền** 🐶💜. Bạn vướng gì với Huyền thì sủa to lên
+                    Xin cảm ơn
+                </div>
+                <span class="h-msg-time">Vừa xong</span>
+            </div>
+        </div>
+
+        <form class="h-input-area" id="h-assist-frm">
+            <input type="text" id="h-assist-in" placeholder="Nhập câu hỏi của bạn..." autocomplete="off" required>
+            <button type="submit" class="h-assist-snd" id="h-assist-snd" aria-label="Gửi">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </form>
+    </div>
+
+    <script src="app_tim.js"></script>
+</body>
+
+</html>
