@@ -575,7 +575,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    const tabTitle = "PURPLE STYLE | Bio Link & Donate 💜";
+    const tabTitle = "THANH HUYEN | Bio Link & Donate";
     let titleIndex = 0;
     let isReversing = false;
     let typingSpeed = 200;
